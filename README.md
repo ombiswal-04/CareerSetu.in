@@ -35,8 +35,8 @@ It motivates me to keep improving the project and adding more features.
 - **Multer** (Resume Uploads)
 
 ### Hosting
-- **Frontend**: GitHub Pages
-- **Backend**: Render / Railway / Heroku
+- **Full Stack (Recommended)**: Vercel (Frontend + Backend)
+- **Alternative**: GitHub Pages (Frontend) + Render (Backend)
 
 ## 🚀 Features
 
