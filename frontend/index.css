@@ -1,0 +1,250 @@
+/* Job Tracker - Premium Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap');
+
+:root {
+  /* --- Typography --- */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* --- Light Mode (Default) --- */
+  --bg-primary: #FAFAF9;
+  /* Soft off-white */
+  --bg-secondary: #FFFFFF;
+  /* Pure white for cards */
+  --bg-tertiary: #F0F4F5;
+  /* Light gray/green tint for sections */
+
+  --text-primary: #0F3D3E;
+  /* Deep Teal */
+  --text-secondary: #4A5568;
+  /* Dark Gray */
+  --text-tertiary: #8898AA;
+  /* Muted */
+
+  --accent-primary: #10B981;
+  /* Brand Green */
+  --accent-secondary: #0F3D3E;
+  /* Deep Teal */
+  --accent-hover: #059669;
+
+  --border-color: #E2E8F0;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  --grid-dot-color: #cbd5e1;
+  /* Light mode dots (Slate 300) */
+
+  /* Legacy mapping for existing components till refactor complete */
+  --color-primary: var(--accent-primary);
+  --color-secondary: var(--accent-secondary);
+  --color-surface: var(--bg-secondary);
+  --color-border: var(--border-color);
+  --color-text: var(--text-primary);
+  --color-text-muted: var(--text-secondary);
+  --color-bg-section: var(--bg-primary);
+  --sidebar-width: 260px;
+}
+
+[data-theme="dark"] {
+  /* --- Dark Mode (Refined Slate Palette) --- */
+  --bg-primary: #020617;
+  /* Slate 950 - Deepest */
+  --bg-secondary: #1e293b;
+  /* Slate 800 - Standard Card */
+  --bg-tertiary: #0f172a;
+  /* Slate 900 - Sections */
+
+  --text-primary: #f8fafc;
+  /* Slate 50 */
+  --text-secondary: #cbd5e1;
+  /* Slate 300 */
+  --text-tertiary: #94a3b8;
+  /* Slate 400 */
+
+  --accent-primary: #10B981;
+  /* Brand Green */
+  --accent-secondary: #020617;
+  /* Dark contrast for accent backgrounds */
+  --accent-hover: #059669;
+  /* Darker Green */
+
+  --border-color: #334155;
+  /* Slate 700 - Visible borders */
+  --glass-bg: rgba(2, 6, 23, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+
+  --grid-dot-color: rgba(255, 255, 255, 0.15);
+  /* Dark mode dots */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  /* Improved readability */
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  /* Tighter headings */
+}
+
+/* Utils */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Reset buttons - with global improvements */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Common Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  /* Slightly wider */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* App Layout */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 0;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Smoother bezier */
+}
+
+@media (min-width: 1024px) {
+  .app-main--with-sidebar {
+    margin-left: var(--sidebar-width);
+  }
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------------------------------------------ */
+/* Infinite Carousel Animation (Trending Jobs)                        */
+/* ------------------------------------------------------------------ */
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Optional fade mask for premium feel */
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  padding: 2rem 0;
+  /* Space for hover effects and shadow */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  /* Move from 0 to -50% to show the full loop of duplicated items */
+  /* If duplicated set is appended, we slide Left. */
+  /* "Left to Right" request means visuals move to Right? */
+  /* If visuals move Right, we need to animate from -50% to 0. */
+  /* Let's stick to standard Marquee (Right-to-Left visual flow, i.e. items enter Right, exit Left) unless user insists on "Left to Right" direction. */
+  /* User said: "Animate cards moving from LEFT -> RIGHT". */
+  /* Visuals moving Left->Right means TranslateX increases. */
+  /* So we start at -50% (showing right half) and move to 0 (showing left half). */
+  animation: scroll-right 60s linear infinite;
+  will-change: transform;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

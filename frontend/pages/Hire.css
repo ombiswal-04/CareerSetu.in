@@ -1,0 +1,91 @@
+/* Hire.css */
+
+.candidates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.candidate-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.candidate-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-primary);
+}
+
+.candidate-info {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.candidate-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.candidate-job {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.candidate-meta {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.candidate-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.btn-action {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.2s;
+}
+
+.btn-accept {
+    background: #10b981;
+    color: white;
+}
+
+.btn-reject {
+    background: #ef4444;
+    color: white;
+}
+
+.btn-schedule {
+    background: #3b82f6;
+    color: white;
+    flex: 100%;
+}
+
+.btn-action:hover {
+    filter: brightness(1.1);
+}

@@ -1,0 +1,128 @@
+.footer {
+  margin-top: auto;
+  padding: 2.5rem 0 1.5rem;
+  /* Reduced padding by ~35-40% */
+  background: var(--bg-tertiary);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  /* Base font size reduction */
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  /* Tighter spacing */
+}
+
+@media (min-width: 640px) {
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* Space between logo and social section */
+}
+
+.footer__logo {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: rgb(35, 190, 139);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="dark"] .footer__logo {
+  color: rgb(35, 190, 139);
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__social-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.footer__social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__icon {
+  font-size: 1.25rem;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  filter: grayscale(100%);
+}
+
+.footer__icon:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  filter: grayscale(0%);
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  /* Relaxed spacing for links */
+}
+
+.footer__item {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: normal;
+}
+
+.footer__link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: var(--accent-primary);
+  /* text-decoration: underline; Removed underline preference */
+}
+
+/* Footer Bottom */
+.footer__bottom {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}

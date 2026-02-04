@@ -1,0 +1,130 @@
+.page {
+    flex: 1;
+    padding: 3rem 0 5rem;
+    background: var(--bg-primary);
+}
+
+.page__title {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.page__subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.jobs__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.jobs__card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.jobs__card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-secondary);
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .jobs__card:hover {
+    border-color: var(--accent-primary);
+}
+
+.jobs__card-logo {
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+}
+
+.jobs__card-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.jobs__card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.jobs__card-company {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.jobs__card-location {
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    margin-top: 0.25rem;
+}
+
+.jobs__badge {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.jobs__badge--applied {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.jobs__badge--interview {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.jobs__badge--offer {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.jobs__badge--saved {
+    background: var(--bg-primary);
+    color: var(--text-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+@media (min-width: 768px) {
+    .page__title {
+        font-size: 2.25rem;
+    }
+
+    .jobs__card {
+        padding: 1.75rem;
+    }
+}
