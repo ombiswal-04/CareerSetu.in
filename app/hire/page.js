@@ -73,13 +73,13 @@ function HireContent() {
                             {applications.map(app => (
                                 <div key={app._id} className="candidate-card">
                                     <div className="candidate-info">
-                                        <div className="candidate-name">{app.userId.name}</div>
-                                        <div className="candidate-job">Applied for: <strong>{app.jobId.title}</strong></div>
-                                        <div className="candidate-meta">{app.userId.email}</div>
+                                        <div className="candidate-name">{app.userId?.name || 'Unknown User'}</div>
+                                        <div className="candidate-job">Applied for: <strong>{app.jobId?.title || 'Unknown Job'}</strong></div>
+                                        <div className="candidate-meta">{app.userId?.email || 'No email'}</div>
                                         <div className="candidate-resume-status" style={{ marginTop: '0.75rem' }}>
-                                            {app.userId.resumeUrl ? (
+                                            {app.userId?.resumeUrl ? (
                                                 <a
-                                                    href={app.userId.resumeUrl}
+                                                    href={app.userId?.resumeUrl}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="btn-action"
